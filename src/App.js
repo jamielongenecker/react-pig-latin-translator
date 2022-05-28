@@ -70,7 +70,9 @@ const App = () => {
 
   return (
     <AppContainer>
-      <AppTitle>English-to-Pig Latin Translator</AppTitle>
+      <AppTitle>
+        English-to-Pig Latin Translator
+      </AppTitle>
       <PigImage
         src="/LargePig.png"
         alt="This piggy went to market"
@@ -97,7 +99,26 @@ const App = () => {
         </Tabs>
       </TabsContainer>
       <VerticalSpacer/>
-      <Attribution>Icons made by <Link href="https://www.flaticon.com/authors/hery-mery" title="Hery Mery">Hery Mery</Link> and <Link href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</Link> from <Link href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</Link></Attribution>
+      <Attribution>
+        Icons made by 
+        <Link 
+          href="https://www.flaticon.com/authors/hery-mery" 
+          title="Hery Mery">
+            Hery Mery
+        </Link> 
+        and 
+        <Link 
+          href="https://www.flaticon.com/authors/freepik" 
+          title="Freepik">
+            Freepik
+        </Link> 
+        from 
+        <Link 
+          href="https://www.flaticon.com/" 
+          title="Flaticon">
+            www.flaticon.com
+        </Link>
+      </Attribution>
     </AppContainer>
   );
 }
