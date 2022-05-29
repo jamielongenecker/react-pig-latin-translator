@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import translator from './translator';
 import SingleWordInput from './SingleWordInput';

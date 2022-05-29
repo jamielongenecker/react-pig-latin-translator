@@ -1,6 +1,6 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
-import {useTimer} from 'react-timer-hook';
+import { useTimer } from 'react-timer-hook';
 
 import styled from 'styled-components';
 import randomWords from 'random-words';
