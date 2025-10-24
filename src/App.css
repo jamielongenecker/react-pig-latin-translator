@@ -1,0 +1,57 @@
+@keyframes pigImageSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-container {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: pink;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+
+.app-title {
+  font-size: 2em;
+}
+
+.pig-image {
+  max-width: 300px;
+  height: auto;
+  pointer-events: none;
+  padding: 5%;
+}
+
+.pig-image-spinning {
+  animation: pigImageSpin infinite linear;
+}
+
+.tabs-container {
+  min-width: 60%;
+}
+
+.tabs-label-container {
+  font-size: 1.2em;
+}
+
+.vertical-spacer {
+  flex-grow: 1;
+}
+
+.attribution-link {
+  color: white;
+}
+
+.attribution {
+  font-size: 1vmin;
+}

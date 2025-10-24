@@ -1,0 +1,27 @@
+@keyframes outputAnimation {
+  0% {
+    color: white;
+  }
+  99% {
+    color: #f34079;
+  }
+  100% {
+    opacity: 0;
+    position: fixed;
+    z-index: -5;
+  }
+}
+
+.animated-word {
+  animation: outputAnimation 4s ease-out forwards;
+}
+
+.animation-container {
+  height: calc(20px + 2vmin);
+}
+
+.translated-output {
+  color: white;
+  height: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin);
+}

@@ -1,0 +1,27 @@
+.input-box {
+  color: black;
+  width: 80%;
+  min-width: 300px;
+  max-width: 800px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1.2em;
+  border: 2px solid #f34079;
+  background-color: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-box:focus {
+  border-color: #fc894d;
+  box-shadow: 0 0 10px rgba(243, 64, 121, 0.3);
+}
+
+.input-box:disabled {
+  background-color: #eee;
+  border-color: #ccc;
+  cursor: not-allowed;
+}

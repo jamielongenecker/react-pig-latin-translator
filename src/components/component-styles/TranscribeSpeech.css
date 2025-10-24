@@ -1,0 +1,36 @@
+.recording-button {
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Codec cold', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.recording-button:active,
+.recording-button:hover {
+  outline: 0;
+}
+
+.recording-button span {
+  transition: all 200ms;
+}
+
+.recording-button:hover span {
+  transform: scale(0.9);
+  opacity: 0.75;
+}
+
+.recording-button-text:hover {
+  transform: scale(0.9);
+  opacity: 0.75;
+}
+
+.english-output,
+.pig-latin-output {
+  /* Add any specific styles you want for these containers */
+}

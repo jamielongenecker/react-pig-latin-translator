@@ -1,0 +1,26 @@
+.game-score {
+  color: white;
+  font-size: 1.5em;
+}
+
+.game-time {
+  color: white;
+  font-size: 1.5em;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.game-state-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.prompt {
+  font-size: 2em;
+}
+
+.word-to-type {
+  color: white;
+}
