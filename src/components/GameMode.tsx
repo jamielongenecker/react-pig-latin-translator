@@ -23,10 +23,10 @@ const GameMode = ({ increasePigSpinSpeed }: GameModeProps) => {
   const [gameScore, setGameScore] = useState(0);
 
   useEffect(() => {
-    const randomWord = randomWords();
+    const randomWord = randomWords(1)[0];
     setGameWord({
-      englishWord: randomWord as string,
-      pigLatinWord: Translator(randomWord as string),
+      englishWord: randomWord,
+      pigLatinWord: Translator([randomWord]),
     });
   }, [gameScore]);
 
@@ -73,6 +73,7 @@ const GameMode = ({ increasePigSpinSpeed }: GameModeProps) => {
       <SingleWordInput
         isDisabled={!isGameModeActivated}
         onSubmitWord={handleSubmitWord}
+        submitOnEnter={true}
       />
     </div>
   );

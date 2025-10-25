@@ -12,7 +12,11 @@ const isLowerCase = (letter: string) => {
   return letter === letter.toLowerCase();
 };
 
-const englishToPigLatin = (word: string) => {
+const englishToPigLatin = (words: string[]) => {
+  words = words.map((word) => translateSingleWordToPigLatin(word));
+  return words.join(` `);
+};
+const translateSingleWordToPigLatin = (word: string) => {
   word = word.trim();
   if (word.length === 0) return ``;
 

@@ -9,29 +9,23 @@ However, users can paste text that has multiple words. So we handle both cases i
 type SingleWordInputProps = {
   isDisabled: boolean;
   onSubmitWord: (word: string) => void;
+  submitOnEnter?: boolean;
 };
 
 const SingleWordInput = ({
   isDisabled,
   onSubmitWord,
 }: SingleWordInputProps) => {
-  const [englishInput, setEnglishInput] = useState(``);
+  const [englishInput, setEnglishInput] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const allInputText = e.target.value;
+    setEnglishInput(e.target.value);
+  };
 
-    const splitInputText = allInputText.split(' ');
-    if (splitInputText.length === 1) {
-      setEnglishInput(splitInputText[0]);
-    } else {
-      for (const currentInputText of splitInputText) {
-        if (currentInputText.length === 0) {
-          continue;
-        }
-        console.log(`Word completed: [${currentInputText}]`);
-        setEnglishInput(``);
-        onSubmitWord(currentInputText);
-      }
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && englishInput.trim().length > 0) {
+      onSubmitWord(englishInput.trim());
+      setEnglishInput('');
     }
   };
 
@@ -41,6 +35,7 @@ const SingleWordInput = ({
       value={englishInput}
       type="text"
       onChange={handleChange}
+      onKeyDown={handleKeyDown}
       disabled={isDisabled}
       placeholder="This little piggy went to market..."
     />

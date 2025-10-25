@@ -18,7 +18,7 @@ const TranscribeSpeech = () => {
     let pigLatinOutput = ``;
     for (const englishWord of transcript.split(' ')) {
       if (englishWord.length === 0) continue;
-      pigLatinOutput += ` ` + Translator(englishWord);
+      pigLatinOutput += ` ` + Translator([englishWord]);
     }
     setTranscribedPigLatin(pigLatinOutput);
 
